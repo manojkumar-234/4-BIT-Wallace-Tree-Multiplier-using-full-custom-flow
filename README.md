@@ -182,7 +182,7 @@ The schematic has 28 instances (16 AND gates, 4 HAs and 8 FAs), 16 pins and 48 n
 
 ### Symbols
 
-![Symbols](symbols/symbols.png)
+![Symbols](symbols/all_symbols.png)
 
 Each cell has a custom symbol so it can be used hierarchically: inverter, AND, OR, XOR, HA, FA, and the 4-bit multiplier block with inputs `A0–A3`, `B0–B3` and outputs `P0–P7`.
 
