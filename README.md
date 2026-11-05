@@ -28,7 +28,7 @@ A binary multiplier has three steps:
 Partial product generation: every bit of A is ANDed with every bit of B. For 4 bits this gives 16 partial products.
 Partial product reduction: the partial products are added column by column.
 Final addition: the last two rows are added to produce the product.
-In an array multiplier the reduction is done row by row, so the delay grows linearly with the number of bits. A Wallace tree instead reduces all columns in parallel using half adders (HA) and full adders (FA) as counters. A full adder takes 3 bits of the same weight and produces 1 sum bit (same weight) and 1 carry bit (next weight), so each layer cuts the height of the columns by roughly a factor of 3/2. The number of reduction layers then grows only with log of the operand width, which makes the Wallace tree faster than an array multiplier for the same width.
+In an array multiplier the reduction is done row by row, so the delay grows linearly with the number of bits. A Wallace tree instead reduces all columns in parallel using half adders (HA) and full adders (FA) as counters. A full adder takes 3 bits of the same weight and produces 1 sum bit (same weight) and 1 carry bit (next weight), so each layer cuts the height of the columns by roughly a factor of 3/2. The number of reduction layers then grows only with the logarithm of the operand width, which makes the Wallace tree faster than an array multiplier for the same width.
 Partial product naming used in this project
 Each partial product `aᵢbⱼ` is given an index `m` as follows:
 	a3	a2	a1	a0
@@ -143,7 +143,7 @@ Verification status: [update with your DRC / LVS / post-layout simulation result
 .
 ├── README.md
 ├── LICENSE
-├── docs/
+├── algorithm/
 │   ├── algorithm.jpeg
 │   └── manual_design.jpeg
 ├── schematics/
@@ -156,17 +156,18 @@ Verification status: [update with your DRC / LVS / post-layout simulation result
 │   ├── mult_top.png
 │   ├── mult_tb.png
 │   └── symbols.png
-├── simulation/
+├── simulations/
 │   ├── transient_inputs.png
 │   └── transient_outputs.png
 └── layout/
-    └── mult_lay.png
+    └── mult_layout.png
 ```
+---
 10. How to Reproduce
 Create a Virtuoso library attached to the gpdk090 technology.
 Draw the `inverter`, `and_gate`, `or_gate` and `xor_gate` schematics (W = 120 nm, L = 100 nm).
 Create symbols and build `Half_adder`, then `full_adder`.
-Build the `mult` schematic using the connection plan in `docs/manual_design.jpeg`.
+Build the `mult` schematic using the connection plan in `algorithm/manual_design.jpeg`.
 Create `mult_TB` with pulse sources on A and B and run a 100 ns transient simulation in ADE L (Spectre).
 Draw the layout (`mult_lay`) and run DRC and LVS.
 11. Future Work
