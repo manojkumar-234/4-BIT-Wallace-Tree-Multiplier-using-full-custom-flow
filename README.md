@@ -134,7 +134,7 @@ A = 1111, B = 1111	1 1 1 0 0 0 0 1	225
 `P1` to `P4` stay at logic 0 apart from short spikes at the switching instants. These are glitches caused by unequal path delays through the adder tree when many inputs change at once. They settle back to 0 before the next transition.
 ---
 8. Layout
-![Layout](layout/mult_lay.png)
+![Layout](layout/mult_layout.png)
 Theory: The layout was drawn in Virtuoso Layout Suite XL for the gpdk090 process. Standard CMOS layout layers are used: Nwell, Poly, Pimp/Nimp diffusion, Contacts, and Metal1 onward for routing, with vias between metal layers. Transistors for each gate are placed in rows, with PMOS in n-well regions and NMOS in the substrate, and supply rails shared between neighbouring cells. Signals are routed on Metal1/Metal2 and above.
 Verification status: [update with your DRC / LVS / post-layout simulation results here.]
 ---
