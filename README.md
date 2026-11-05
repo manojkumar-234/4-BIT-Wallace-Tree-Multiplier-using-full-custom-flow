@@ -280,7 +280,9 @@ Released under the MIT License. See [LICENSE](LICENSE).
 
 ## Author
 
-**Manoj Kumar**<br>
+**Manoj Kumar** <br>
 Dual Degree (B.Tech + M.Tech), Electronics and Communication Engineering, IIITDM Kurnool
 
-**Under the guidance of:** Dr. P. Rangababu, Associate Professor, Department of Electronics and Communication Engineering, IIITDM Kurnool
+**Under the guidance of:** <br>
+**Dr. P. Rangababu** <br>
+Associate Professor, Department of Electronics and Communication Engineering, IIITDM Kurnool
