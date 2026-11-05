@@ -39,7 +39,7 @@ b3	m15	m14	m13	m12
 where `m0 = a0b0`, `m1 = a1b0`, … , `m15 = a3b3`.
 ---
 2. Algorithm (Hand Derivation)
-![Algorithm sheet](docs/algorithm.jpeg)
+![Algorithm sheet](algorithm/algorithm.jpeg)
 The sheet above shows the partial product matrix and how it is reduced layer by layer.
 Theory:
 The top of the sheet lists the 16 partial products arranged by bit weight. The columns hold 1, 2, 3, 4, 3, 2 and 1 bits, so the tallest column has 4 bits.
@@ -49,7 +49,7 @@ The running count written on the right of the sheet gives the adder budget: 4 ha
 The outputs `P0` to `P7` are taken as: `P0 = m0`, `P1 = S7`, `P2 = S8`, `P3 = S9`, `P4 = S10`, `P5 = S11`, `P6 = S12`, `P7 = C12`.
 ---
 3. Manual Design (Wiring Plan)
-![Manual design](docs/manual_design.jpeg)
+![Manual design](algorithm/manual_design.jpeg)
 Theory:
 This drawing converts the algorithm into a connection plan before drawing the schematic. The partial products `m0` to `m15` enter from the top. Each HA/FA block is labelled with its sum (`S`) and carry (`C`) outputs, numbered so that every signal can be traced into the next layer.
 Top layer: half adders compress the 3- and 4-bit columns of the middle weights.
