@@ -182,7 +182,7 @@ The schematic has 28 instances (16 AND gates, 4 HAs and 8 FAs), 16 pins and 48 n
 
 ### Symbols
 
-![Symbols](schematics/symbols.png)
+![Symbols](symbols/symbols.png)
 
 Each cell has a custom symbol so it can be used hierarchically: inverter, AND, OR, XOR, HA, FA, and the 4-bit multiplier block with inputs `A0–A3`, `B0–B3` and outputs `P0–P7`.
 
@@ -224,7 +224,6 @@ Each cell has a custom symbol so it can be used hierarchically: inverter, AND, O
 
 **Theory:** The layout was drawn in Virtuoso Layout Suite XL for the gpdk090 process. Standard CMOS layout layers are used: Nwell, Poly, Pimp/Nimp diffusion, Contacts, and Metal1 onward for routing, with vias between metal layers. Transistors for each gate are placed in rows, with PMOS in n-well regions and NMOS in the substrate, and supply rails shared between neighbouring cells. Signals are routed on Metal1/Metal2 and above.
 
-*Verification status: [update with your DRC / LVS / post-layout simulation results here.]*
 
 ---
 
@@ -246,6 +245,7 @@ Each cell has a custom symbol so it can be used hierarchically: inverter, AND, O
 │   ├── full_adder.png
 │   ├── mult_top.png
 │   ├── mult_tb.png
+├── symbols/
 │   └── symbols.png
 ├── simulations/
 │   ├── transient_inputs.png
@@ -280,4 +280,8 @@ Released under the MIT License. See [LICENSE](LICENSE).
 
 **Manoj Kumar**
 Dual Degree (B.Tech + M.Tech), Electronics and Communication Engineering
+Under the Guidance of
+**Dr.P Rangababu**
+Associate Professor, Electronics and Communication Engineering
+IIITDM KURNOOL
 IIITDM Kurnool
