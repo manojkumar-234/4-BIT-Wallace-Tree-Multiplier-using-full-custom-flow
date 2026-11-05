@@ -122,10 +122,10 @@ Each cell has a custom symbol so it can be used hierarchically: inverter, AND, O
 ![Testbench](schematics/mult_tb.png)
 Theory: The testbench `mult_TB` instantiates the multiplier symbol and drives each input (`A0–A3`, `B0–B3`) with a pulse voltage source (`v1 = 0 V`, `v2 = 1 V`). Each output `P0–P7` is connected to an output pin for probing. A transient analysis (0 to 100 ns) is run in ADE L with the Spectre simulator at 27 °C.
 7.2 Input Waveforms
-![Input waveforms](simulation/transient_inputs.png)
+![Input waveforms](simulations/transient_inputs.png)
 Theory: The eight inputs switch between 0 V and 1 V (logic 0 and logic 1). In this run all inputs are driven by the same pulse, so the operands alternate between `0000` and `1111`.
 7.3 Output Waveforms
-![Output waveforms](simulation/transient_outputs.png)
+![Output waveforms](simulations/transient_outputs.png)
 Theory: With `A = B = 1111`, the expected product is `15 × 15 = 225 = 1110_0001`. The waveform matches this:
 Inputs	P7 P6 P5 P4 P3 P2 P1 P0	Decimal
 A = 0000, B = 0000	0 0 0 0 0 0 0 0	0
