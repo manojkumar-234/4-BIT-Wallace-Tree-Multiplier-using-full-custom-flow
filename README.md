@@ -278,7 +278,6 @@ Released under the MIT License. See [LICENSE](LICENSE).
 
 ## Author
 
-## Author
 
 **Manoj Kumar** <br>
 Dual Degree (B.Tech + M.Tech), Electronics and Communication Engineering, IIITDM Kurnool
